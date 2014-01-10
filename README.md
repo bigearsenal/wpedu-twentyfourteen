@@ -1,4 +1,4 @@
-wpedu-twentyfourteen
-====================
+wpedu-randyh-2014
+=================
 
-WPEdu twentyfourteen Child Theme
+wp twentyfourteen child theme for learning and demo purposes
