@@ -15,6 +15,16 @@
 
 
 /**
+ * Initiate Addons
+ **/
+require_once( "addons/initiate-addons.php" );
+
+
+
+
+
+
+/**
  * ChildTheme Class
  *
  * @version 1.0
