@@ -83,11 +83,11 @@ class JetPackVC {
 	 *
 	 * @usage: echo JetPackVC::jetpack_sharing()
 	 **/
-	function jetpack_sharing() {
+	function jetpack_sharing( $content ) {
 		
 		if ( function_exists( 'sharing_display' ) ) {
 
-			return "<div class=\"jetpack-sharing-wrapper\">" . sharing_display() . "</div>";
+			return $content . "<div class=\"jetpack-sharing-wrapper\">" . sharing_display() . "</div>";
 
 		} // end if ( function_exists( 'sharing_display' ) )
 

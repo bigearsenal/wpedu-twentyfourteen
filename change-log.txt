@@ -1,7 +1,11 @@
-== 1.1.0 ==
+== 1.1.0 - 1.1.1 ==
 01.13.14
 - added "addons" folder and initiate-addons.php
-- added JetPacVC addon for sharing manipulation and various other future JetPack uses.
+- added JetPackVC addon for sharing manipulation and various other future JetPack uses.
+
+01
+- update JetPackVC with proper filter parameter
+- add template tpl-common-functions.php
 
 == 1.0.0 ==
 01.10.14
