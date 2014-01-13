@@ -8,6 +8,9 @@
  * @license GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  * @version 1.0
  * @updated 00.00.00
+ *
+ * Description: This page is currently still under construction though it does work. The end goal is
+ * to use it to display common functions that are used through out the development of a WordPress theme.
  **/
 #################################################################################################### */
 
