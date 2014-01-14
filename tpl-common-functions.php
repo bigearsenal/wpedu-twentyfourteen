@@ -25,19 +25,36 @@ get_header(); ?>
 			if ( have_posts() ) {
 				while ( have_posts() ) {
 					the_post();
-					?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					
-						<?php the_title( '<header class="entry-header"><h1 class="entry-title">', '</h1></header>' ); ?>
-					
-						<div class="entry-content">
-							<?php the_content(); ?>
-						</div><!-- .entry-content -->
+					echo "<article "; post_class(); echo ">";
+						echo "<header class=\"entry-header\">";
+							echo "<h1 class=\"entry-title\">";
+								the_title();
+							echo "</h1>";
+							echo "<div class=\"h2\">";
+								echo get_post_meta( $post->ID, 'secondary_title', true );
+							echo "</div>";
+						echo "</header>";
 						
-					</article><!-- #post-## -->
-					
-					<?php
+						echo "<div class=\"entry-content\">";
+							
+							the_content();
+							
+							echo JetPackSharingVC();
+							
+							if ( has_post_thumbnail() ) {
+								echo "<p>";
+									the_post_thumbnail( 'custom-page-image', array(
+										'class' => 'custom-page-image'
+									) );
+								echo "</p>";
+							}
+							
+							echo wpautop( get_post_meta( $post->ID, 'post_footer_text', true ) );
+							
+						echo "</div>";
+						
+					echo "</article>";
 					
 				} // end while ( have_posts() )
 			} // end if ( have_posts() )
@@ -49,4 +66,5 @@ get_header(); ?>
 </div><!-- #main-content -->
 
 <?php
+get_sidebar();
 get_footer();

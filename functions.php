@@ -67,7 +67,7 @@ class ChildTheme {
 	 **/
 	function init_child_theme() {
 		
-		// add_action( 'after_setup_theme', array( &$this, 'after_setup_theme' ) );
+		add_action( 'after_setup_theme', array( &$this, 'after_setup_theme' ) );
 		add_action( 'init', array( &$this, 'init' ) );
 		
 	} // end function init_child_theme
@@ -106,6 +106,8 @@ class ChildTheme {
 		
 		// Translations can be added to the /languages/ directory.
 		// load_theme_textdomain( 'childtheme', "$this->stylesheet_directory/languages" );
+		
+		add_image_size( 'custom-page-image', 700, 1000, false );
 		
 	} // end function after_setup_theme
 	

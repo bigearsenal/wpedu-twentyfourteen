@@ -25,8 +25,8 @@ function wp_JetPackVC() {
 	remove_filter( 'the_content', 'sharing_display', 19 );
 	remove_filter( 'the_excerpt', 'sharing_display', 19 );
 	
-	add_filter( 'the_content', 'JetPackSharingVC', 20 );
-	add_filter( 'the_excerpt', 'JetPackSharingVC', 20 );
+	// add_filter( 'the_content', 'JetPackSharingVC', 20 );
+	// add_filter( 'the_excerpt', 'JetPackSharingVC', 20 );
 
 } // end function wp_JetPackVC
 
@@ -43,7 +43,7 @@ function wp_JetPackVC() {
  * 
  * @usage: echo JetPackSharingVC()
  **/
-function JetPackSharingVC( $content ) {
+function JetPackSharingVC( $content = '' ) {
 	
 	if ( function_exists( 'sharing_display' ) ) {
 		return $content . "<div class=\"jetpack-sharing-wrapper\">" . sharing_display() . "</div>";
